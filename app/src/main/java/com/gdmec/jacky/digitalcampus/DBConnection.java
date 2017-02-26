@@ -8,7 +8,7 @@ public class DBConnection {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/digitalcampus", "root", "");
+                    "jdbc:mysql://mysql-jackyfeng.c9users.io/phpmyadmin/", "jackyfeng", "cjacky3795391.");
             System.out.println("连接数据库成功");
         } catch (ClassNotFoundException e) {
             System.out.println("加载驱动失败");

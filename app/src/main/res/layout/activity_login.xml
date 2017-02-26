@@ -48,6 +48,7 @@
             android:layout_height="25dp"
             android:layout_x="70dp"
             android:layout_y="185dp"
+            android:text="07150812"
             android:id="@+id/input_account"/>
 
         <TextView
@@ -64,6 +65,7 @@
             android:layout_height="25dp"
             android:layout_x="70dp"
             android:layout_y="225dp"
+            android:text="141819"
             android:id="@+id/input_password"/>
 
         <Button
