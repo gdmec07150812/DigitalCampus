@@ -1,80 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.gdmec.jacky.digitalcampus.Login"
     android:gravity="center_horizontal"
-    android:weightSum="1">
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.gdmec.jacky.digitalcampus.Login">
 
     <AbsoluteLayout
-        android:layout_marginTop="20dp"
         android:layout_width="250dp"
         android:layout_height="400dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="0.54">
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@mipmap/ic_launcher"
             android:layout_x="76dp"
             android:layout_y="27dp"
-            android:id="@+id/imageView2" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
-            android:text="D C Club"
+            android:id="@+id/login_name"
             android:layout_width="155dp"
             android:layout_height="50dp"
             android:layout_x="50dp"
             android:layout_y="130dp"
-            android:textSize="40dp"
-            android:id="@+id/login_name" />
+            android:text="D C Club"
+            android:textSize="40dp" />
 
         <TextView
+            android:id="@+id/account"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_x="15dp"
+            android:layout_y="185dp"
             android:text="学号"
-            android:layout_width="40dp"
-            android:layout_height="25dp"
-            android:textSize="20dp"
-            android:layout_x="15dp"
-            android:layout_y="185dp"
-            android:id="@+id/account" />
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="25dp"
-            android:layout_x="70dp"
-            android:layout_y="185dp"
-            android:text="07150812"
-            android:id="@+id/input_account"/>
+            android:textSize="20dp" />
 
         <TextView
-            android:text="密码"
+            android:id="@+id/password"
             android:layout_width="40dp"
             android:layout_height="25dp"
-            android:textSize="20dp"
             android:layout_x="15dp"
-            android:layout_y="225dp"
-            android:id="@+id/password" />
-
-        <EditText
-            android:layout_width="160dp"
-            android:layout_height="25dp"
-            android:layout_x="70dp"
-            android:layout_y="225dp"
-            android:text="141819"
-            android:id="@+id/input_password"/>
+            android:layout_y="235dp"
+            android:text="密码"
+            android:textSize="20dp" />
 
         <Button
-            android:text="登录"
+            android:id="@+id/button_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_x="140dp"
-            android:layout_y="260dp"
-            android:id="@+id/button_login" />
+            android:layout_x="138dp"
+            android:layout_y="270dp"
+            android:text="登录" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="75dp"
+            android:layout_y="228dp"
+            android:text="141819" />
+
+        <EditText
+            android:id="@+id/input_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="75dp"
+            android:layout_y="179dp"
+            android:text="07150812" />
+
+
     </AbsoluteLayout>
 
 </LinearLayout>

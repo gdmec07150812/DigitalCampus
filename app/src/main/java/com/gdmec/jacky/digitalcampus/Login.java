@@ -1,10 +1,13 @@
 package com.gdmec.jacky.digitalcampus;
 
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.sql.*;
 
@@ -14,6 +17,7 @@ public class Login extends AppCompatActivity {
     String account;
     String password;
     Button button_login;
+    boolean boolean_login=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +31,14 @@ public class Login extends AppCompatActivity {
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("进入");
                 query();
+                if(boolean_login){
+                    Intent intent = new Intent(Login.this, DCChat.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(Login.this, "账号或密码错误", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
@@ -42,8 +52,10 @@ public class Login extends AppCompatActivity {
                 while (resultSet.next()) {
                     if (resultSet.getString("account") == account && resultSet.getString("password") == password) {
                         System.out.println("登录成功");
-                    }else{
+                        boolean_login=true;
+                    } else {
                         System.out.println("登录失败");
+                        boolean_login=false;
                     }
                 }
             } catch (SQLException e) {
